@@ -14,4 +14,8 @@ export default class ProductsDAO {
         const product = await productsModel.findByIdAndDelete(id)
         return product
     }
+    async updateOneProduct(id,prod){
+        const productUpdated = productsModel.findByIdAndUpdate(id,prod,{new:true})
+        return productUpdated
+    }
 }

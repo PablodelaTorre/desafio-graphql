@@ -6,6 +6,7 @@ export const typeDefs = `
     type Mutation {
         addProduct(input:ProductInput):Product
         deleteProduct(id:ID):Product
+        updateProduct(id:ID,input:ProductInput):Product
     }
 
     type Product {

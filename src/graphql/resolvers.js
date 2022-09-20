@@ -15,6 +15,9 @@ export const resolvers = {
         },
         deleteProduct: async(_,{id})=>{
             return productsController.deleteProduct(id)
+        },
+        updateProduct: async(_,{id,input})=>{
+            return productsController.updateProduct(id,input)
         }
     }
 }
