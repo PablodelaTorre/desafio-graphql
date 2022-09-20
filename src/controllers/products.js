@@ -12,5 +12,8 @@ export default class ProductsController {
         const productCreated = await this.productService.createProduct(prod)
         return productCreated
     }
-
+    async deleteProduct(id){
+        const productDeleted = await this.productService.deleteProduct(id)
+        return productDeleted
+    }
 }

@@ -10,5 +10,7 @@ export default class ProductService {
     async createProduct(prod){
         return this.productDao.createOneProduct(prod)
     }
-
+    async deleteProduct(id){
+        return this.productDao.deleteOneProduct(id)
+    }
 }

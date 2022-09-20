@@ -12,6 +12,9 @@ export const resolvers = {
         //(roots,arguments)
         addProduct: async(_,{input})=>{
             return productsController.createProduct(input)
+        },
+        deleteProduct: async(_,{id})=>{
+            return productsController.deleteProduct(id)
         }
     }
 }

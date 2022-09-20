@@ -10,4 +10,8 @@ export default class ProductsDAO {
         await product.save()
         return product
     }
+    async deleteOneProduct(id){
+        const product = await productsModel.findByIdAndDelete(id)
+        return product
+    }
 }
