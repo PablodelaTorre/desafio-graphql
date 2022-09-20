@@ -1,5 +1,23 @@
 export const typeDefs = `
     type Query {
-        getProducts:String
+        getAllProducts:[Product]
+    }
+
+    type Mutation {
+        addProduct(input:ProductInput):Product
+        deleteProduct(id:ID):Product
+    }
+
+    type Product {
+        id:ID
+        name:String
+        price:Int
+        stock:Int
+    }
+
+    input ProductInput {
+        name:String!
+        price:Int!
+        stock:Int
     }
 `
